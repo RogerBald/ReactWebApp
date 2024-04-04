@@ -1,18 +1,39 @@
-import React from 'react';
+// Arquivo App.js
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import GameCard from './components/GameCard';
+import Categories from './components/Categories';
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const categories = [
+    'FPS',
+    'MOBA',
+    'Battle Royale',
+    'Ação',
+    'Simulação',
+    'Batalha Real',
+    'RPG',
+    'Sobrevivência',
+    'Aventura',
+  ];
+
+  const handleSelectCategory = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="App">
       <Header />
+      <Categories categories={categories} onSelectCategory={handleSelectCategory} />
       <main>
         <h2>Momento da coleta dos dados</h2>
         <h4>Data: 04/04/2024 - Horário: 13:46</h4>
         <div className="game-list">
-          <GameCard
+        <GameCard
             title="Counter Strike-2"
             image="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1711156045"
             price="Gratuito"
@@ -80,7 +101,7 @@ function App() {
             image="https://cdn.cloudflare.steamstatic.com/steam/apps/1203220/header.jpg?t=1711374515"
             price="Gratuito"
             link="https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/"
-            genre="Batalha real"
+            genre="Battle Royale"
           />
           <GameCard
             title="Path of Exile"
@@ -119,9 +140,12 @@ function App() {
           />
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+          
+
