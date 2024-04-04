@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GameCard({ title, image, price, link }) {
+function GameCard({ title, image, price, link, genre }) {
   return (
     <div className="game-card">
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -8,6 +8,7 @@ function GameCard({ title, image, price, link }) {
       </a>
       <div className="game-info">
         <h3>{title}</h3>
+        {genre && <p>Gênero: {genre}</p>}
         <p>Preço: {price}</p>
       </div>
     </div>
