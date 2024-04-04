@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header>
-      <h1>Steam Page</h1>
+      <h1>Jogos mais jogados da Steam </h1>
     </header>
   );
 }
