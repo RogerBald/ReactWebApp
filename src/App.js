@@ -80,7 +80,7 @@ function App() {
             image="https://cdn.cloudflare.steamstatic.com/steam/apps/1203220/header.jpg?t=1711374515"
             price="Gratuito"
             link="https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/"
-            genre="Batalha real"
+            genre="Battle Royale"
           />
           <GameCard
             title="Path of Exile"
